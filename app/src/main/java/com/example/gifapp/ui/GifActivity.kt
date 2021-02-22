@@ -15,6 +15,7 @@ class GifActivity : AppCompatActivity(R.layout.activity_gif) {
         if (currentFragment == null) {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, GifCategoriesFragment())
+                .addToBackStack(null)
                 .commit()
         }
     }
